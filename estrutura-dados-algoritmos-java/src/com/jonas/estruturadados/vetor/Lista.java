@@ -50,6 +50,10 @@ public class Lista<T> {
 		}
 	}
 	
+	public T obtem(int posicao) {
+		return this.buscar(posicao);
+	}
+	
 	public T buscar(int posicao) {
 		if (!(posicao >= 0 && posicao < tamanho)) {
 			throw new IllegalArgumentException("Posição inválida");
@@ -67,7 +71,6 @@ public class Lista<T> {
 	}
 	
 	public int ultimoIndice(T elemento) {
-		int ultimaPos = -1;
 		for(int i = this.tamanho - 1; i >= 0; i--) {
 			if (this.elementos[i].equals(elemento)) {
 				return i;
