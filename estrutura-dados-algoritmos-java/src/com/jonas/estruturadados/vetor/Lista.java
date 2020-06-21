@@ -91,6 +91,13 @@ public class Lista<T> {
 		this.tamanho--;
 	}
 	
+	public void remover(T elemento) {
+		int pos = this.buscar(elemento);
+		if (pos > -1) {
+			this.remover(pos);
+		}
+	}
+	
 	public int getTamanho() {
 		return this.tamanho;
 	}
