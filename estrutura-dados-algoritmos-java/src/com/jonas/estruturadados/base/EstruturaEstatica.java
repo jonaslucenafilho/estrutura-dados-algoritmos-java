@@ -2,8 +2,8 @@ package com.jonas.estruturadados.base;
 
 public class EstruturaEstatica<T> {
 
-	private T[] elementos;
-	private int tamanho;
+	protected T[] elementos;
+	protected int tamanho;
 
 	public EstruturaEstatica(int capacidade) {
 		this.elementos = (T[]) new Object[capacidade];
